@@ -1,4 +1,4 @@
-#include <string>
+#include "string.h"
 using namespace std;
 
 //Implementacion de la clase Dia anio
@@ -6,15 +6,20 @@ using namespace std;
 class Registro{
     //Atributos
     private:
-        int idusuario,contrasena;
+        string idusuario,contrasena;
 
     //Metodos
     public:          //CONSTRUCTOR
-        Registro(int _idusuario, int _contrasena){
-            idusuario = _idusuario;
-            contrasena = _contrasena;
-        }
-
-        int ingresardatos(Registro& d);   //Es objeto dinamico
-        bool verificarlogin();
+        Registro()
+        {
+            idusuario = "\0";
+            contrasena = "\0";
+        };
+        bool Ingresar();
 };
+
+//Primera Funcion = Darle un valor a variable usuario
+//Parametro = Se toma un valor de tipo int
+//Retorno = No regresa nada
+
+    
