@@ -94,7 +94,7 @@ int main(){
 
                 if(eleccion==1){
                     Album albumes[20]={album1,album2,album3,album4,album5,album6, album7, album8, album9, album10};
-                    cout<<"\nLos Mejores Albumes\n";
+                    cout<<"\nEstos son todos los albumes subidos a la biblioteca hasta la fecha";
                     for(int contador=0;contador<20;contador++){ //Hasta un maximo de 20 albumes
                         {
                             cout<<albumes[contador].getAlbumInfo()<<endl; 
@@ -106,7 +106,7 @@ int main(){
 
 
                 }else if(eleccion==2){
-                    
+                    Cancion canciones[]={cancion1, cancion2, cancion3, cancion4, cancion5, cancion6, cancion7, cancion8, cancion9, cancion10};
                     // Recordemos el orden que se tenia en un inicio siendo (genero musical, instrumento_recurrente, fecha_lanzamiento, numero_canciones)
     
                     for(int contador=0;contador<10;contador++){
@@ -114,14 +114,13 @@ int main(){
                             cout<<albumes[contador].getAlbumInfo()<<endl;
                         }
                     } 
+                    cout<<"\nPara regresar al pasillo principal seleccione una tecla...";
+                    system("pause>STOP");
                     
 
                 }else if(eleccion==3){
                     cout<<"\n Los mejores datos curiosos solo en el piso 3";
 
-                
-                
-                
                 
                 }else if(eleccion==4){
                     cout<<"\n Gracias por visitar la sala de albumes 3";
@@ -135,10 +134,10 @@ int main(){
             cout<<"Bienvenido a la Segunda zona de la Biblioteca Tec Musical";
             while(true){
                 cout<<("\nNuestro catalogo de canciones se va expandiendo poco a poco!!!");
-                cout<<"\n(1) Ver Canciones existentes \n(2) Registrar Nuevas Canciones\n(3) Datos Curiosos de Canciones \n(4) Regresar al menu principal\nSeleccione aqui su opcion: ";
+                cout<<"\n(1) Ver Canciones existentes \n(2) Registrar Nuevas Canciones\n(3) Datos Curiosos de Canciones \n(4) Salir de la biblioteca\nSeleccione aqui su opcion: ";
                 cin>>eleccion;
                 if(eleccion==1){
-                    Cancion canciones[]={cancion1, cancion2, cancion3, cancion4, cancion5, cancion6, cancion7, cancion8, cancion9, cancion10};
+                    Cancion canciones[20]={cancion1, cancion2, cancion3, cancion4, cancion5, cancion6, cancion7, cancion8, cancion9, cancion10};
                     
                     for(int contador=0;contador<20;contador++){ //Hasta un maximo de 20 Canciones
                         {
@@ -173,7 +172,7 @@ int main(){
                 cin>>eleccion;
 
                 if (eleccion==1){
-                    Artista artistas[]={artista1, artista2, artista3, artista4, artista5, artista6, artista7, artista8, artista9, artista10};
+                    Artista artistas[20]={artista1, artista2, artista3, artista4, artista5, artista6, artista7, artista8, artista9, artista10};
                     
                     for(int contador=0;contador<20;contador++){ //Hasta un maximo de 20 Canciones
                         {
@@ -199,7 +198,7 @@ int main(){
                 break;
 
 
-        }else if(eleccion==4){ //Opción Personal de administración
+        }else if(eleccion==4){ 
             cout<<"Bienvenido, sabias que la musica tiene una gran diversidad???";
 
         }else if(eleccion==5){
