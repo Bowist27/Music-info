@@ -1,13 +1,42 @@
-#include <string>
-using namespace std;
+#ifndef ARTISTA
+#define ARTISTA
 
-class Artista
-{
+#include "GeneroMusical.h"
+#include "DatoCurioso.cpp"
+
+#include <iostream>
+
+#include <string>
+#include <sstream>
+
+//Herencia
+class Artista:public GeneroMusical{
     private:
-        int edad;
         string nombre, popularidad, nacionalidad;
+        int edad;
+
+        DatoCurioso datoCurioso;
 
     public:
         Artista();
-        void ImprimirDatos(string);
+          // (genero_musical,instrumento_recurrente, nombre,edad,popularidad,nacionalidad, datoCurioso)
+        Artista(string,string, string,int,string,string, string);
+
+        // Setters
+        void setNombre(string);
+        void setEdad(int);
+        void setPopularidad(string);
+        void setNacionalidad(string);
+
+        // Viene de datoCurioso
+        void agregaDatoCurioso(DatoCurioso,string);
+
+        string getNombre();
+        int getEdad();
+        string getPopularidad();
+        string getNacionalidad();
+        
+        // Super string que se va a usar
+        string getArtistaInfo ();
 };
+#endif
