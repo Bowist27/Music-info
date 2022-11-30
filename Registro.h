@@ -1,4 +1,4 @@
-#include "string.h"
+#include <string>
 using namespace std;
 
 //Implementacion de la clase Dia anio
@@ -17,9 +17,5 @@ class Registro{
         };
         bool Ingresar();
 };
-
-//Primera Funcion = Darle un valor a variable usuario
-//Parametro = Se toma un valor de tipo int
-//Retorno = No regresa nada
 
     
