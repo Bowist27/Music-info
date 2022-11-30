@@ -1,11 +1,40 @@
-#include <string>
-using namespace std;
+#ifndef CANCION
+#define CANCION
 
-class Cancion
-{
+#include "GeneroMusical.h"
+#include "DatoCurioso.cpp"
+
+#include <iostream>
+
+#include <string>
+#include <sstream>
+
+//Herencia
+class Cancion:public GeneroMusical{
     private:
-        string duracion, lyrics;
+        string nombre, duracion, puntuacion;
+        DatoCurioso datoCurioso;
+
     public:
         Cancion();
-        void ImprimirDatos(string);
+        // (genero_musical,instrumento_recurrente, nombre,duracion,puntuacion, datocurioso )
+        Cancion(string,string, string,string,string, string);
+    
+        // Setters
+        void setNombre(string);
+        void setDuracion(string);
+        void setPuntuacion(string);
+
+        // Viene de datoCurioso
+        void agregaDatoCurioso(DatoCurioso,string);
+        
+        string getNombre();
+        string getDuracion();
+        string getPuntuacion();
+
+        // Super string que se va a usar
+        string getCancionInfo();
+        
+        
 };
+#endif
