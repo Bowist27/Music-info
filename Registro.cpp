@@ -6,7 +6,7 @@ using namespace std;
 
 
 bool Registro::Ingresar(){
-    string _idusuario = "SI", _contrasena = "1";
+    string _idusuario = "A12345", _contrasena = "12345";
     cout<<"Enter your User";
     cin>>idusuario;
     cout<<"Enter Password";
